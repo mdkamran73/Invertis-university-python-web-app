@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration</title>
+</head>
+<body>
+    <h2>Course Selected: {{ course }}</h2>
+    <h3>Fee: {{ fee }}</h3>
+
+    <form action="/payment" method="post">
+        <input type="hidden" name="course" value="{{ course }}">
+
+        Name: <input type="text" name="name" required><br><br>
+        Email: <input type="email" name="email" required><br><br>
+
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</body>
+</html>
+
