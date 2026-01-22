@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+</head>
+<body>
+    <h2>Payment Page</h2>
+
+    <p>Name: {{ name }}</p>
+    <p>Course: {{ course }}</p>
+    <p>Amount: {{ fee }}</p>
+
+    <form action="/success" method="post">
+        <input type="hidden" name="name" value="{{ name }}">
+        <input type="hidden" name="email" value="{{ email }}">
+        <input type="hidden" name="course" value="{{ course }}">
+        <input type="hidden" name="fee" value="{{ fee }}">
+
+        <label>Select Payment Method:</label><br>
+        <input type="radio" name="payment" value="Credit Card" required> Credit Card<br>
+        <input type="radio" name="payment" value="Debit Card"> Debit Card<br>
+        <input type="radio" name="payment" value="Net Banking"> Net Banking<br>
+        <input type="radio" name="payment" value="UPI"> UPI<br><br>
+
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+</html>
+
+
+
